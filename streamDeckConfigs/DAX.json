@@ -1,0 +1,75 @@
+{
+    "mainConfig": {
+        "brightness": 100,
+        "asset":".DE30Cash"
+    },
+    "ButtonConfig": {
+        "Button1": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button2": {
+            "imagePath": "BUY5.png",
+            "action": "BUY",
+            "lotSize": 5
+        },
+        "Button3": {
+            "imagePath": "BUY10.png",
+            "action": "BUY",
+            "lotSize": 10
+        },
+        "Button4": {
+            "imagePath": "BUY20.png",
+            "action": "BUY",
+            "lotSize": 20
+        },
+        "Button5": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button6": {
+            "imagePath": "SETPAGE.png",
+            "action": "CHANGESDPAGE"
+        },
+        "Button7": {
+            "imagePath": "discord.png",
+            "action": "COMMAND",
+            "command": "discord"
+        },
+        "Button8": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button9": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button10": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button11": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        },
+        "Button12": {
+            "imagePath": "SELL5.png",
+            "action": "SELL",
+            "lotSize": 5
+        },
+        "Button13": {
+            "imagePath": "SELL10.png",
+            "action": "SELL",
+            "lotSize": 10
+        },
+        "Button14": {
+            "imagePath": "SELL20.png",
+            "action": "SELL",
+            "lotSize": 20
+        },
+        "Button15": {
+            "imagePath": "closeCheese.png",
+            "action": "CLOSE"
+        }
+    }
+}
