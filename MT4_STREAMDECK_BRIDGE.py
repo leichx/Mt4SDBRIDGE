@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 from StreamDeck.DeviceManager import DeviceManager
 from StreamDeck.ImageHelpers import PILHelper
 from DWX_ZeroMQ_Connector_v2_0_1_RC8 import DWX_ZeroMQ_Connector
-print(os.path.abspath(os.getcwd()))
+streamdecks = DeviceManager().enumerate()
 mt4Connector = DWX_ZeroMQ_Connector( 
                  _ClientID='dwx-zeromq',    # Unique ID for this client
                  _host='localhost',         # Host to connect to
@@ -25,18 +25,13 @@ mt4Connector = DWX_ZeroMQ_Connector(
 configFile = None
 
 def streamDeskConnection():
-    streamdecks = DeviceManager().enumerate()
+    global streamdecks
     print("Found {} Stream Deck(s).\n".format(len(streamdecks)))
 
     for index, deck in enumerate(streamdecks):
-        if(deck.open() != None):
-            print("if")
-            deck.close()
-        else:
-            print("else")
-            deck.open()
-            deck.reset()
-        print("hello2")
+        deck.open()
+        deck.reset()
+        
         print("Opened '{}' device (serial number: '{}')".format(
             deck.deck_type(), deck.get_serial_number()))
 
@@ -56,7 +51,13 @@ def streamDeskConnection():
 
             if t.is_alive():
                 t.join()
-                
+  
+def render():
+    global streamdecks
+    for index, deck in enumerate(streamdecks):
+        for key in range(deck.key_count()):
+            update_key_image(deck, key, False)      
+            
 def update_key_image(deck, key, state):
     # Determine what icon and label to use on the generated key.
     key_style = get_key_style(deck, key, state)
@@ -91,7 +92,7 @@ def get_key_style(deck, key, state):
             "icon": os.path.abspath(os.getcwd()) + '/Mt4SDBRIDGE/images/' + configFile['ButtonConfig']['Button' + str(key + 1)]['imagePath'],
         }
     except:
-        pass
+        print("Imagen no encontrada")
     
 def key_change_callback(deck, key, state):
     if state == True:
@@ -108,16 +109,18 @@ def key_change_callback(deck, key, state):
                 _SL=50, _TP=50, _comment="Python-to-MT",
                 _lots=configFile['ButtonConfig']['Button' + str(key + 1)]['lotSize'], _magic=123456, _ticket=0)
         elif(configFile['ButtonConfig']['Button' + str(key + 1)]['action'] == 'CHANGESDPAGE'):
-            main()
+            load_config_file()
+            render()
         elif(configFile['ButtonConfig']['Button' + str(key + 1)]['action'] == 'COMMAND'):
             subprocess.Popen(configFile['ButtonConfig']['Button' + str(key + 1)]['command'],shell=True)
             
     # Check if the key is changing to the pressed state.
 
 def load_config_file():
+    global configFile 
+    configFile = None
     configFilePath = str(input("Config file name(on streamDeckConfigs folder): "))
     with open( os.path.abspath(os.getcwd()) + "/Mt4SDBRIDGE/streamDeckConfigs/" + configFilePath, 'r') as f:
-        global configFile 
         configFile = json.loads(f.read())
 
 def main():

@@ -5,27 +5,29 @@
     },
     "ButtonConfig": {
         "Button1": {
-            "imagePath": "closeCheese.png",
-            "action": "CLOSE"
-        },
-        "Button2": {
             "imagePath": "BUY5.png",
             "action": "BUY",
             "lotSize": 5
         },
-        "Button3": {
+        "Button2": {
             "imagePath": "BUY10.png",
             "action": "BUY",
             "lotSize": 10
         },
-        "Button4": {
+        "Button3": {
             "imagePath": "BUY20.png",
             "action": "BUY",
             "lotSize": 20
         },
+        "Button4": {
+            "imagePath": "BUY40.png",
+            "action": "BUY",
+            "lotSize": 40
+        },
         "Button5": {
-            "imagePath": "closeCheese.png",
-            "action": "CLOSE"
+            "imagePath": "BUY80.png",
+            "action": "BUY",
+            "lotSize": 80
         },
         "Button6": {
             "imagePath": "SETPAGE.png",
@@ -49,27 +51,29 @@
             "action": "CLOSE"
         },
         "Button11": {
-            "imagePath": "closeCheese.png",
-            "action": "CLOSE"
-        },
-        "Button12": {
             "imagePath": "SELL5.png",
             "action": "SELL",
             "lotSize": 5
         },
-        "Button13": {
+        "Button12": {
             "imagePath": "SELL10.png",
             "action": "SELL",
             "lotSize": 10
         },
-        "Button14": {
-            "imagePath": "SELL20.png",
+        "Button13": {
+            "imagePath": "SELL10.png",
             "action": "SELL",
             "lotSize": 20
         },
+        "Button14": {
+            "imagePath": "SELL40.png",
+            "action": "SELL",
+            "lotSize": 40
+        },
         "Button15": {
-            "imagePath": "closeCheese.png",
-            "action": "CLOSE"
+            "imagePath": "SELL80.png",
+            "action": "SELL",
+            "lotSize": 80
         }
     }
 }
