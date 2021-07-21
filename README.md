@@ -19,6 +19,8 @@ pip install streamdeck zmq
 ```
 Go to folder "MT4INCLUDES" and copy the content of "ExperAdvisor" in your expert advisors in MT4, copy the content of "Include" folder in MT4 Includes folder and copy the content of "Library" on your MT4 Library folder.
 
+The main folder should be named ```Mt4SDBRIDGE```
+
 The folder "streamDeckConfigs" folder contains .json files with the configuration of your stream deck keys, you have to has as many buttons as your stream deck has in the json file. You can configure the actions ``` "BUY", "SELL", "CLOSE", "CHANGESDPAGE","COMMAND" ```, see the .json file to get an idea.
 
 The folder /images/ includes several images for BUY/SELL/CLOSE and CHANGEPAGE
