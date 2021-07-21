@@ -11,7 +11,7 @@ Currently the following StreamDeck product variants are supported:
 
 ## Package Installation:
 
-Install the Python library via pip:
+Install Python library's via pip:
 
 ```
 pip install streamdeck zmq 
@@ -26,6 +26,7 @@ The folder /images/ includes several images for BUY/SELL/CLOSE and CHANGEPAGE
 
 ## Execution:
 
-Go to your expert advisors in MT4 and execute Server in the chart
-Execute  ``` python3 MT4_STREAMDECK_BRIDGE.py ``` in your command line (with stream deck connected)
+Go to your expert advisors in MT4 and execute ```Server```.
+<br>
+Execute   ``` python3 MT4_STREAMDECK_BRIDGE.py ``` in your command line (with stream deck connected)
 Input your desired configfile full name (include .json)
