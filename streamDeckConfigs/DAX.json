@@ -61,7 +61,7 @@
             "lotSize": 10
         },
         "Button13": {
-            "imagePath": "SELL10.png",
+            "imagePath": "SELL20.png",
             "action": "SELL",
             "lotSize": 20
         },

@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw
 from StreamDeck.DeviceManager import DeviceManager
 from StreamDeck.ImageHelpers import PILHelper
 from DWX_ZeroMQ_Connector_v2_0_1_RC8 import DWX_ZeroMQ_Connector
+
 streamdecks = DeviceManager().enumerate()
 mt4Connector = DWX_ZeroMQ_Connector( 
                  _ClientID='dwx-zeromq',    # Unique ID for this client

@@ -14,7 +14,7 @@ Currently the following StreamDeck product variants are supported:
 Install Python library's via pip:
 
 ```
-pip install streamdeck zmq 
+pip install streamdeck zmq pandas Pillow 
 
 ```
 Go to folder ```MT4INCLUDES``` and copy the content of ```ExperAdvisor``` in your expert advisors in MT4, copy the content of ```Include``` folder in MT4 Includes folder and copy the content of ```Library``` on your MT4 Library folder.

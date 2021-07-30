@@ -1,7 +1,7 @@
 {
     "mainConfig": {
         "brightness": 100,
-        "asset":".US30Cash"
+        "asset":"US30.cash"
     },
     "ButtonConfig": {
         "Button1": {
