@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Assets",
+			"path": "../../Descargas/python-elgato-streamdeck-master/src/Assets"
+		},
+		{
+			"name": "oneKeyTradeScripts",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
